@@ -84,11 +84,11 @@ dynamic "ingress" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress = {
+  ingress {
     from_port = 9100
     to_port = 9100
     protocol = "tcp"
-    cidr_block = ["10.0.0.0/16"]
+    cidr_blocks = [var.cidr_block]
   }
 
   egress {
